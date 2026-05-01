@@ -39,7 +39,19 @@ nav a {
   color: var(--text);
   text-decoration: none;
   font-weight: 500;
-  transition: 0.2s ease;
+  position: relative;
+  transition: 0.25s ease;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent);
+  transition: width 0.3s ease;
 }
 
 nav a:hover {
