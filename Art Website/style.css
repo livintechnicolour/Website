@@ -1,0 +1,129 @@
+/* --------------------------------------------------
+   ROOT VARIABLES — your theme lives here
+-------------------------------------------------- */
+:root {
+  --bg: #0b0b0f;
+  --text: #ffffff;
+  --accent: #8a4fff; /* neon purple */
+  --soft-border: rgba(255, 255, 255, 0.08);
+  --font-main: 'Arial', sans-serif;
+}
+
+/* --------------------------------------------------
+   GLOBAL RESET
+-------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* --------------------------------------------------
+   BASE STYLES
+-------------------------------------------------- */
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-main);
+  line-height: 1.6;
+}
+
+/* Centers content + keeps it readable */
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* --------------------------------------------------
+   HEADER + NAVIGATION
+-------------------------------------------------- */
+header {
+  padding: 30px 0;
+  border-bottom: 1px solid var(--soft-border);
+  box-shadow: 0 2px 20px rgba(138, 79, 255, 0.15);
+}
+
+header h1 {
+  font-size: 2.4rem;
+  margin-bottom: 15px;
+  color: var(--text);
+  text-shadow: 
+      0 0 4px var(--accent),
+      0 0 10px rgba(138, 79, 255, 0.4);
+}
+
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: 0.25s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background: var(--accent);
+  box-shadow: 0 0 8px var(--accent);
+  transition: 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--accent);
+  text-shadow: 0 0 6px var(--accent);
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* --------------------------------------------------
+   MAIN SECTIONS
+-------------------------------------------------- */
+main {
+  padding: 40px 0;
+}
+
+section {
+  padding: 60px 0;
+  border-bottom: 1px solid var(--soft-border);
+}
+
+section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+/* --------------------------------------------------
+   POEMS + ART PLACEHOLDERS
+-------------------------------------------------- */
+#Poems p,
+#Art p,
+#About p {
+  max-width: 700px;
+  margin-bottom: 20px;
+}
